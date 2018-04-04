@@ -14,7 +14,6 @@ This is designed to complement my existing article [What’s New in Swift 4.1?](
 
 If you hit problems or have questions, you're welcome to tweet me [@twostraws](https://twitter.com/twostraws) or email <paul@hackingwithswift.com>.
 
-**Note:** This playground requires Swift 4.1, so you should have installed Xcode 9.3 or later.
+**Note:** This playground requires Swift 4.1, so you should have installed Xcode 9.3 or later. This is available through the [Mac App Store](https://itunes.apple.com/gb/app/xcode/id497799835?mt=12) or direct from <https://developer.apple.com/download>.
 
-![Screenshot of Xcode 9.3 running this playground.][playground-screenshot.png]
-
+![Screenshot of Xcode 9.3 running this playground.](playground-screenshot.png)
