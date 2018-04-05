@@ -5,7 +5,7 @@
 
  Swift 4.1 implements [SE-0157](https://github.com/apple/swift-evolution/blob/master/proposals/0157-recursive-protocol-constraints.md), which lifts restrictions on the way we use associated types inside protocols. As a result, we can now create recursive constraints for our associated types: associated types that are constrained by the protocol they are defined in.
 
- To demonstrate this, let's consider a simple team hierarchy in a tech company. In this company, every employee has a manager – someone more senior to them that they report to. Each manager must also be an employee of the company, because it would be weird if they didn't.
+ To demonstrate this, let's consider a simple team hierarchy in a tech company. In this company, every employee has a manager – someone more senior to them that they report to. Each manager must also be an employee of the company, because it would be weird if they weren't.
 
  We can express this relationship in a simple `Employee` protocol:
 */
@@ -40,7 +40,7 @@ class JuniorDeveloper: Employee {
    var manager: SeniorDeveloper?
 }
 /*:
- - note: We must use classes here rather than structs, because `BoardMember` itself contains a `BoardMember` property and that would result in infinitely sized structs.
+ - note: I've used classes here rather than structs because `BoardMember` itself contains a `BoardMember` property and that would result in an infinitely sized struct. If one of these has to be a class I personally would prefer to make all three classes just for consistency, but if you preferred you could leave `BoardMember` as a class and make both `SeniorDeveloper` and `JuniorDeveloper` into structs.
 
  &nbsp;
 
